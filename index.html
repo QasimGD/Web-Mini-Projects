@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1" onclick="alert('hello')" onmouseleave="ToggleColor()" onmouseenter="ToggleColor()" class="para">Paragraph 1</p>
+    
+    <label for="input">Enter Text:</label>
+    <input id="input"  onkeyup="typeText()" onkeypress="wordCount()"/> 
+
+    <div style="margin-top:20px">
+        Typed Text : <span id="text"></span>
+        <div></div>
+        Word Count : <span id="count">0</span>
+    </div>
+    <p id="p2" class="para">Paragraph 2</p>
+    <p id="p3" class="para">Paragraph 3</p>
+     <hr />
+    <p id="p4" >Paragraph 6</p>
+
+    <hr />
+    <input placeholder="Enter Number 1" id="num1" /> <br />
+    <input placeholder="Enter Number 2" id="num2"/> <br />
+    <select onchange="selectOpreation(event)">
+        <option selected disabled>Select opreation</option>
+        <option value="+"> + </option>
+        <option value="-"> - </option>
+        <option value="*"> * </option>
+        <option value="/"> / </option>
+    </select>
+    <button onclick="calculate()">Calculate</button>
+    <br />
+    Output: <span id="output"></span> 
+
+    <hr />
+
+    <!------------------*****************for calculator--------------**********************-->
+    <!-- <input id="inp" /> <br />
+    <input id="out" /> <br />
+    <button onclick="print(event)">1</button>
+    <button onclick="print(event)">2</button>
+    <button onclick="print(event)">3</button> <br />
+    <button onclick="print(event)">+</button>
+    <button onclick="print(event)">-</button>
+    <button onclick="print(event)">=</button> -->
+
+    
+<table class="calculator" >
+    <tr>
+      <td colspan="3"> <input class="display-box" type="text" id="result" /> </td>
+   
+      <!-- clearScreen() function clears all the values -->
+      <td> <input type="button" value="C" onclick="clearScreen()" id="btn" /> </td>
+    </tr>
+    <tr>
+      <!-- display() function displays the value of clicked button -->
+      <td> <input type="button" value="1" onclick="display('1')" /> </td>
+      <td> <input type="button" value="2" onclick="display('2')" /> </td>
+      <td> <input type="button" value="3" onclick="display('3')" /> </td>
+      <td> <input type="button" value="/" onclick="display('/')" /> </td>
+    </tr>
+    <tr>
+      <td> <input type="button" value="4" onclick="display('4')" /> </td>
+      <td> <input type="button" value="5" onclick="display('5')" /> </td>
+      <td> <input type="button" value="6" onclick="display('6')" /> </td>
+      <td> <input type="button" value="-" onclick="display('-')" /> </td>
+    </tr>
+    <tr>
+      <td> <input type="button" value="7" onclick="display('7')" /> </td>
+      <td> <input type="button" value="8" onclick="display('8')" /> </td>
+      <td> <input type="button" value="9" onclick="display('9')" /> </td>
+      <td> <input type="button" value="+" onclick="display('+')" /> </td>
+    </tr>
+    <tr>
+      <td> <input type="button" value="." onclick="display('.')" /> </td>
+      <td> <input type="button" value="0" onclick="display('0')" /> </td>
+   
+      <!-- calculate() function evaluates the mathematical expression -->
+      <td> <input type="button" value="=" onclick="calculator()" id="btn" /> </td>
+      <td> <input type="button" value="*" onclick="display('*')" /> </td>
+    </tr>
+  </table>
+
+
+    <hr />
+    <h1>Understanding Foucs/blur events</h1>
+
+    <input onfocus="alert('focus event called')" />
+    <input onblur="alert('blur event called')" />
+
+    <hr />
+    <h1>Arrays</h1>
+    <p id="array"></p>
+
+
+
+    <script src="js/script.js"></script>
+
+
+</body>
+</html>
